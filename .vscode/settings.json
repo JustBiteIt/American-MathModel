@@ -1,0 +1,7 @@
+{
+  "python.defaultInterpreterPath": "E:/Anaconda3/envs/mathModel/python.exe",
+  "python.terminal.activateEnvironment": true,
+  "python.analysis.extraPaths": [
+    "D:/MCM_ICM"
+  ]
+}
