@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "weather_csv": "D:\\ICM_CODE\\weather_helsinki_tmy_hourly.csv",
+    "X_BASELINE": [
+      0.0,
+      0.0,
+      1.57,
+      1.57
+    ],
+    "schemeA": {
+      "n_samples": 2000,
+      "seed": 20260131,
+      "ratio": 0.6,
+      "oh_floor": 5.0,
+      "hoh_floor": 5.0
+    }
+  },
+  "cases": {
+    "case1": {
+      "label": "① Brick + old WWR + no shading",
+      "has_shading": false,
+      "building": {
+        "wwr_south": 0.45,
+        "wwr_other": 0.3
+      },
+      "thermal": {
+        "Cm_J_per_K": 600000000.0,
+        "Rim_K_per_W": 0.00016,
+        "T_max_C": 25.0
+      },
+      "scenarios": {
+        "baseline": {
+          "x": [
+            0.0,
+            0.0,
+            1.57,
+            1.57
+          ],
+          "metrics": {
+            "Eh_kWh_total": 310699.60304447525,
+            "OH_degC_h": 117.2903622472983,
+            "Hoh_h": 122.0
+          },
+          "schemeA_info": {
+            "status": "no_shading"
+          }
+        }
+      }
+    },
+    "case2": {
+      "label": "② Brick + new WWR + no shading",
+      "has_shading": false,
+      "building": {
+        "wwr_south": 0.4,
+        "wwr_other": 0.25
+      },
+      "thermal": {
+        "Cm_J_per_K": 600000000.0,
+        "Rim_K_per_W": 0.00016,
+        "T_max_C": 25.0
+      },
+      "scenarios": {
+        "baseline": {
+          "x": [
+            0.0,
+            0.0,
+            1.57,
+            1.57
+          ],
+          "metrics": {
+            "Eh_kWh_total": 314807.26481838914,
+            "OH_degC_h": 56.97638529747196,
+            "Hoh_h": 78.0
+          },
+          "schemeA_info": {
+            "status": "no_shading"
+          }
+        }
+      }
+    },
+    "case3": {
+      "label": "③ Brick + new WWR + shading",
+      "has_shading": true,
+      "building": {
+        "wwr_south": 0.4,
+        "wwr_other": 0.25
+      },
+      "thermal": {
+        "Cm_J_per_K": 600000000.0,
+        "Rim_K_per_W": 0.00016,
+        "T_max_C": 25.0
+      },
+      "scenarios": {
+        "baseline": {
+          "x": [
+            0.14142531946910208,
+            2.9340558583861895,
+            0.14021440295046905,
+            0.2597732897271897
+          ],
+          "metrics": {
+            "Eh_kWh_total": 316828.7793177839,
+            "OH_degC_h": 23.909046290854093,
+            "Hoh_h": 46.0
+          },
+          "schemeA_info": {
+            "status": "feasible_found",
+            "baseline_feasible": false,
+            "OH_max": 34.18583117848317,
+            "Hoh_max": 46.8,
+            "feasible_count": 1775,
+            "n_samples": 2000,
+            "seed": 20260131,
+            "ratio": 0.6
+          }
+        }
+      }
+    },
+    "case4": {
+      "label": "④ Concrete + old WWR + no shading",
+      "has_shading": false,
+      "building": {
+        "wwr_south": 0.45,
+        "wwr_other": 0.3
+      },
+      "thermal": {
+        "Cm_J_per_K": 1200000000.0,
+        "Rim_K_per_W": 9e-05,
+        "T_max_C": 25.0
+      },
+      "scenarios": {
+        "baseline": {
+          "x": [
+            0.0,
+            0.0,
+            1.57,
+            1.57
+          ],
+          "metrics": {
+            "Eh_kWh_total": 310562.9427828419,
+            "OH_degC_h": 38.133668972465316,
+            "Hoh_h": 62.0
+          },
+          "schemeA_info": {
+            "status": "no_shading"
+          }
+        }
+      }
+    },
+    "case5": {
+      "label": "⑤ Concrete + new WWR + no shading",
+      "has_shading": false,
+      "building": {
+        "wwr_south": 0.4,
+        "wwr_other": 0.25
+      },
+      "thermal": {
+        "Cm_J_per_K": 1200000000.0,
+        "Rim_K_per_W": 9e-05,
+        "T_max_C": 25.0
+      },
+      "scenarios": {
+        "baseline": {
+          "x": [
+            0.0,
+            0.0,
+            1.57,
+            1.57
+          ],
+          "metrics": {
+            "Eh_kWh_total": 314860.6234709343,
+            "OH_degC_h": 10.597927776508353,
+            "Hoh_h": 32.0
+          },
+          "schemeA_info": {
+            "status": "no_shading"
+          }
+        }
+      }
+    },
+    "case6": {
+      "label": "⑥ Concrete + new WWR + shading",
+      "has_shading": true,
+      "building": {
+        "wwr_south": 0.4,
+        "wwr_other": 0.25
+      },
+      "thermal": {
+        "Cm_J_per_K": 1200000000.0,
+        "Rim_K_per_W": 9e-05,
+        "T_max_C": 25.0
+      },
+      "scenarios": {
+        "baseline": {
+          "x": [
+            0.0822681226294244,
+            1.0611928779479023,
+            0.47088921576420517,
+            1.338156586255257
+          ],
+          "metrics": {
+            "Eh_kWh_total": 316107.2672897224,
+            "OH_degC_h": 3.859454990150727,
+            "Hoh_h": 19.0
+          },
+          "schemeA_info": {
+            "status": "feasible_found",
+            "baseline_feasible": false,
+            "OH_max": 6.358756665905012,
+            "Hoh_max": 19.2,
+            "feasible_count": 1959,
+            "n_samples": 2000,
+            "seed": 20260131,
+            "ratio": 0.6
+          }
+        }
+      }
+    }
+  }
+}

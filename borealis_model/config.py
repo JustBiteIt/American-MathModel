@@ -128,7 +128,7 @@ class Borealis2R2C:
     eta_air: float = 0.35
 
     T_min_C: float = 18.0
-    T_max_C: float = 26.0
+    T_max_C: float = 25.0
 
     T_init_C: float = 21.0
     dt_hours: float = 1.0

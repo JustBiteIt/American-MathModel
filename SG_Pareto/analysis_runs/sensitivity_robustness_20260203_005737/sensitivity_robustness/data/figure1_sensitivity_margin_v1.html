@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sensitivity Analysis Figure</title>
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --panel: #ffffff;
+      --text: #222222;
+      --muted: #666666;
+      --accent: #2f6f91;
+      --border: #e4e4e0;
+    }
+    body {
+      margin: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+    }
+    .btn {
+      border: 1px solid var(--border);
+      background: #fafafa;
+      padding: 6px 12px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    img {
+      width: 100%;
+      max-width: 1200px;
+      display: block;
+      margin: 0 auto;
+    }
+    .meta {
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .meta span {
+      display: inline-block;
+      margin-right: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Sensitivity Analysis (Figure 1)</h1>
+    <button class="btn" id="btn-download">Download PNG</button>
+  </div>
+  <div class="panel">
+    <img id="figure" src="../plots/figure1_sensitivity_margin.png" alt="Sensitivity Analysis Figure" />
+    <div class="meta">
+      <span>pass_rate=1.00</span>
+      <span>Q0.05=380439 kWh</span>
+      <span>decision=PASS</span>
+    </div>
+  </div>
+  <script>
+    const btn = document.getElementById('btn-download');
+    btn.addEventListener('click', () => {
+      const link = document.createElement('a');
+      link.href = document.getElementById('figure').src;
+      link.download = 'figure1_sensitivity_margin.png';
+      link.click();
+    });
+  </script>
+</body>
+</html>

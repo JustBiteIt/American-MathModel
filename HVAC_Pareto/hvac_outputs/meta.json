@@ -1,0 +1,30 @@
+{
+  "site": {
+    "name": "borealis",
+    "latitude": 60.1699,
+    "longitude": 24.9384,
+    "tz": "Europe/Helsinki",
+    "weather_csv": "weather_helsinki_tmy_hourly.csv"
+  },
+  "weather_csv": "D:\\ICM_CODE\\weather_helsinki_tmy_hourly.csv",
+  "location": {
+    "latitude": 60.1699,
+    "longitude": 24.9384,
+    "tz": "Europe/Helsinki"
+  },
+  "HDD": 4322.868738245812,
+  "CDD": 55.45124999999999,
+  "xi": -0.9746700788663842,
+  "w_cool": 0.012664960566807881,
+  "w_heat": 0.9873350394331921,
+  "representative": {
+    "row_index_in_results": 1317,
+    "row_index_in_pareto": 39,
+    "E_cool_kWh": 148.3621282386817,
+    "E_heat_kWh": 335843.9821523101,
+    "dN_m": 0.07959731161822303,
+    "dS_m": 0.30535796624705236,
+    "etaE_rad": 1.4493754773856184,
+    "etaW_rad": 1.527123995289989
+  }
+}

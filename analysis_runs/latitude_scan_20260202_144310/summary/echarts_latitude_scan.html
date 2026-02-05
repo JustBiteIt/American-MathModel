@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latitude Scan</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    #chart { width: 100%; height: 620px; }
+    .note { color: #666; font-size: 12px; }
+    .btn { padding: 6px 12px; border: 1px solid #bbb; background: #f7f7f7; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2>Latitude Scan (Representative Variables)</h2>
+    <button id="btn-download" class="btn">Download PNG</button>
+  </div>
+  <div id="chart"></div>
+  <p class="note">If the chart doesn't load, open this file via a local web server (e.g., VSCode Live Server).</p>
+  <script>
+    fetch("./echarts_latitude_scan.json")
+      .then(r => r.json())
+      .then(data => {
+        const lat = data.series.latitudes;
+        const chart = echarts.init(document.getElementById("chart"));
+        chart.setOption({
+          grid: { left: 70, right: 120, top: 60, bottom: 70, containLabel: true },
+          tooltip: { trigger: "axis" },
+          legend: { data: ["dN_m", "dS_m", "etaE_rad", "etaW_rad"], top: 10 },
+          xAxis: { type: "category", data: lat, name: "Latitude (deg)", nameGap: 30 },
+          yAxis: [
+            { type: "value", name: "Overhang depth (m)", nameGap: 35 },
+            { type: "value", name: "Louver parameter (rad)", nameGap: 45 }
+          ],
+          series: [
+            { name: "dN_m", type: "line", yAxisIndex: 0, data: data.series.dN_m, symbol: "circle", symbolSize: 8, lineStyle: { width: 3 } },
+            { name: "dS_m", type: "line", yAxisIndex: 0, data: data.series.dS_m, symbol: "circle", symbolSize: 8, lineStyle: { width: 3 } },
+            { name: "etaE_rad", type: "line", yAxisIndex: 1, data: data.series.etaE_rad, symbol: "triangle", symbolSize: 9, lineStyle: { width: 3 } },
+            { name: "etaW_rad", type: "line", yAxisIndex: 1, data: data.series.etaW_rad, symbol: "triangle", symbolSize: 9, lineStyle: { width: 3 } }
+          ]
+        });
+
+        document.getElementById("btn-download").addEventListener("click", () => {
+          const url = chart.getDataURL({ type: "png", pixelRatio: 2, backgroundColor: "#fff" });
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "latitude_scan.png";
+          a.click();
+        });
+      });
+  </script>
+</body>
+</html>

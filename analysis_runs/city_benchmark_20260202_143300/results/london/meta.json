@@ -1,0 +1,36 @@
+{
+  "case": {
+    "name": "London",
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "tz": "Europe/London"
+  },
+  "weather_csv": "D:\\ICM_CODE\\analysis_runs\\city_benchmark_20260202_143300\\weather\\london_tmy_hourly.csv",
+  "hvac": {
+    "Ci_J_per_K": 200000000.0,
+    "Cm_J_per_K": 800000000.0,
+    "Ria_K_per_W": 0.00025,
+    "Rim_K_per_W": 0.0001,
+    "eta_air": 0.35,
+    "T_heat_C": 18.0,
+    "T_cool_C": 26.0,
+    "T_init_C": 21.0,
+    "dt_hours": 1.0
+  },
+  "HDD": 2679.2255869565224,
+  "CDD": 30.895181159420275,
+  "xi": -0.9772001443456718,
+  "w_cool": 0.011399927827164091,
+  "w_heat": 0.9886000721728359,
+  "pareto_size": 1,
+  "representative": {
+    "row_index_in_results": 1910,
+    "row_index_in_pareto": 0,
+    "E_cool_kWh": 0.0,
+    "E_heat_kWh": 185159.89341572043,
+    "dN_m": 0.03305000215268539,
+    "dS_m": 1.533917860238085,
+    "etaE_rad": 1.5129234146181234,
+    "etaW_rad": 1.5475950391468596
+  }
+}

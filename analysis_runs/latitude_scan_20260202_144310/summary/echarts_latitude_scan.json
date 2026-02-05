@@ -1,0 +1,239 @@
+{
+  "experiment": {
+    "type": "latitude_scan",
+    "fixedLongitude": -0.1278,
+    "latStepDeg": 6,
+    "createdAt": "20260202_144310",
+    "rootDir": "D:\\ICM_CODE\\analysis_runs\\latitude_scan_20260202_144310"
+  },
+  "scan": [
+    {
+      "latitude": 54,
+      "longitude": -0.1278,
+      "weatherCsv": "D:\\ICM_CODE\\analysis_runs\\latitude_scan_20260202_144310\\weather\\lon_m0p13_lat_54_tmy_hourlypcsv",
+      "climate": {
+        "HDD": 2962.447916666667,
+        "CDD": 7.665833333333332,
+        "xi": -0.9948380203732375
+      },
+      "representative": {
+        "dN_m": 0.03305000215268539,
+        "dS_m": 1.533917860238085,
+        "etaE_rad": 1.5129234146181234,
+        "etaW_rad": 1.5475950391468596,
+        "E_heat_kWh": 206983.10630368855,
+        "E_cool_kWh": 0.0
+      },
+      "paretoSize": 1
+    },
+    {
+      "latitude": 48,
+      "longitude": -0.1278,
+      "weatherCsv": "D:\\ICM_CODE\\analysis_runs\\latitude_scan_20260202_144310\\weather\\lon_m0p13_lat_48_tmy_hourlypcsv",
+      "climate": {
+        "HDD": 2260.6641666666665,
+        "CDD": 93.1845833333333,
+        "xi": -0.9208236439717435
+      },
+      "representative": {
+        "dN_m": 0.03305000215268539,
+        "dS_m": 1.533917860238085,
+        "etaE_rad": 1.5129234146181234,
+        "etaW_rad": 1.5475950391468596,
+        "E_heat_kWh": 153576.4293719572,
+        "E_cool_kWh": 390.88704130464146
+      },
+      "paretoSize": 37
+    },
+    {
+      "latitude": 42,
+      "longitude": -0.1278,
+      "weatherCsv": "D:\\ICM_CODE\\analysis_runs\\latitude_scan_20260202_144310\\weather\\lon_m0p13_lat_42_tmy_hourlypcsv",
+      "climate": {
+        "HDD": 2013.4425,
+        "CDD": 687.8441666666665,
+        "xi": -0.49072849234809096
+      },
+      "representative": {
+        "dN_m": 0.03305000215268539,
+        "dS_m": 1.533917860238085,
+        "etaE_rad": 1.5129234146181234,
+        "etaW_rad": 1.5475950391468596,
+        "E_heat_kWh": 124931.1254048208,
+        "E_cool_kWh": 26116.85455632686
+      },
+      "paretoSize": 34
+    },
+    {
+      "latitude": 36,
+      "longitude": -0.1278,
+      "weatherCsv": "D:\\ICM_CODE\\analysis_runs\\latitude_scan_20260202_144310\\weather\\lon_m0p13_lat_36_tmy_hourlypcsv",
+      "climate": {
+        "HDD": 526.8220833333335,
+        "CDD": 835.2379166666665,
+        "xi": 0.2264333680846167
+      },
+      "representative": {
+        "dN_m": 0.586487482189762,
+        "dS_m": 1.9281891923732863,
+        "etaE_rad": 0.1866943824732429,
+        "etaW_rad": 0.17193253242298945,
+        "E_heat_kWh": 15023.79439094197,
+        "E_cool_kWh": 6518.926712008936
+      },
+      "paretoSize": 35
+    },
+    {
+      "latitude": 30,
+      "longitude": -0.1278,
+      "weatherCsv": "D:\\ICM_CODE\\analysis_runs\\latitude_scan_20260202_144310\\weather\\lon_m0p13_lat_30_tmy_hourlypcsv",
+      "climate": {
+        "HDD": 911.1345833333335,
+        "CDD": 2541.15125,
+        "xi": 0.47215576732614106
+      },
+      "representative": {
+        "dN_m": 1.685456790188998,
+        "dS_m": 2.3697179452067627,
+        "etaE_rad": 0.11096095419299046,
+        "etaW_rad": 0.10140434013251638,
+        "E_heat_kWh": 57958.66696395751,
+        "E_cool_kWh": 119746.62436313216
+      },
+      "paretoSize": 33
+    },
+    {
+      "latitude": 24,
+      "longitude": -0.1278,
+      "weatherCsv": "D:\\ICM_CODE\\analysis_runs\\latitude_scan_20260202_144310\\weather\\lon_m0p13_lat_24_tmy_hourlypcsv",
+      "climate": {
+        "HDD": 254.35125000000002,
+        "CDD": 3649.5099999999998,
+        "xi": 0.8696924743419094
+      },
+      "representative": {
+        "dN_m": 1.685456790188998,
+        "dS_m": 2.3697179452067627,
+        "etaE_rad": 0.11096095419299046,
+        "etaW_rad": 0.10140434013251638,
+        "E_heat_kWh": 11702.867802327259,
+        "E_cool_kWh": 205385.3332099035
+      },
+      "paretoSize": 28
+    },
+    {
+      "latitude": 18,
+      "longitude": -0.1278,
+      "weatherCsv": "D:\\ICM_CODE\\analysis_runs\\latitude_scan_20260202_144310\\weather\\lon_m0p13_lat_18_tmy_hourlypcsv",
+      "climate": {
+        "HDD": 0.41125000000000256,
+        "CDD": 4317.985416666666,
+        "xi": 0.9998095357922191
+      },
+      "representative": {
+        "dN_m": 2.3438821062945476,
+        "dS_m": 2.259219820861529,
+        "etaE_rad": 0.12855149844634844,
+        "etaW_rad": 0.1035447542245661,
+        "E_heat_kWh": 0.0,
+        "E_cool_kWh": 221621.67282549693
+      },
+      "paretoSize": 1
+    },
+    {
+      "latitude": 12,
+      "longitude": -0.1278,
+      "weatherCsv": "D:\\ICM_CODE\\analysis_runs\\latitude_scan_20260202_144310\\weather\\lon_m0p13_lat_12_tmy_hourlypcsv",
+      "climate": {
+        "HDD": 0.0,
+        "CDD": 3826.27125,
+        "xi": 1.0
+      },
+      "representative": {
+        "dN_m": 2.3438821062945476,
+        "dS_m": 2.259219820861529,
+        "etaE_rad": 0.12855149844634844,
+        "etaW_rad": 0.1035447542245661,
+        "E_heat_kWh": 0.0,
+        "E_cool_kWh": 156313.64418612115
+      },
+      "paretoSize": 1
+    },
+    {
+      "latitude": 6,
+      "longitude": -0.1278,
+      "weatherCsv": "D:\\ICM_CODE\\analysis_runs\\latitude_scan_20260202_144310\\weather\\lon_m0p13_lat_6_tmy_hourlypcsv",
+      "climate": {
+        "HDD": 0.0,
+        "CDD": 2856.300416666667,
+        "xi": 1.0
+      },
+      "representative": {
+        "dN_m": 2.3438821062945476,
+        "dS_m": 2.259219820861529,
+        "etaE_rad": 0.12855149844634844,
+        "etaW_rad": 0.1035447542245661,
+        "E_heat_kWh": 0.0,
+        "E_cool_kWh": 66912.68404897313
+      },
+      "paretoSize": 1
+    }
+  ],
+  "series": {
+    "latitudes": [
+      54,
+      48,
+      42,
+      36,
+      30,
+      24,
+      18,
+      12,
+      6
+    ],
+    "dN_m": [
+      0.03305000215268539,
+      0.03305000215268539,
+      0.03305000215268539,
+      0.586487482189762,
+      1.685456790188998,
+      1.685456790188998,
+      2.3438821062945476,
+      2.3438821062945476,
+      2.3438821062945476
+    ],
+    "dS_m": [
+      1.533917860238085,
+      1.533917860238085,
+      1.533917860238085,
+      1.9281891923732863,
+      2.3697179452067627,
+      2.3697179452067627,
+      2.259219820861529,
+      2.259219820861529,
+      2.259219820861529
+    ],
+    "etaE_rad": [
+      1.5129234146181234,
+      1.5129234146181234,
+      1.5129234146181234,
+      0.1866943824732429,
+      0.11096095419299046,
+      0.11096095419299046,
+      0.12855149844634844,
+      0.12855149844634844,
+      0.12855149844634844
+    ],
+    "etaW_rad": [
+      1.5475950391468596,
+      1.5475950391468596,
+      1.5475950391468596,
+      0.17193253242298945,
+      0.10140434013251638,
+      0.10140434013251638,
+      0.1035447542245661,
+      0.1035447542245661,
+      0.1035447542245661
+    ]
+  }
+}

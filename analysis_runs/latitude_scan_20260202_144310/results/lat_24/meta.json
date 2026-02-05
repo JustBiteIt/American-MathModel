@@ -1,0 +1,36 @@
+{
+  "case": {
+    "name": "lat_24",
+    "latitude": 24.0,
+    "longitude": -0.1278,
+    "tz": "UTC"
+  },
+  "weather_csv": "D:\\ICM_CODE\\analysis_runs\\latitude_scan_20260202_144310\\weather\\lon_m0p13_lat_24_tmy_hourlypcsv",
+  "hvac": {
+    "Ci_J_per_K": 200000000.0,
+    "Cm_J_per_K": 800000000.0,
+    "Ria_K_per_W": 0.00025,
+    "Rim_K_per_W": 0.0001,
+    "eta_air": 0.35,
+    "T_heat_C": 18.0,
+    "T_cool_C": 26.0,
+    "T_init_C": 21.0,
+    "dt_hours": 1.0
+  },
+  "HDD": 254.35125000000002,
+  "CDD": 3649.5099999999998,
+  "xi": 0.8696924743419094,
+  "w_cool": 0.9348462371709547,
+  "w_heat": 0.06515376282904528,
+  "pareto_size": 28,
+  "representative": {
+    "row_index_in_results": 1030,
+    "row_index_in_pareto": 15,
+    "E_cool_kWh": 205385.3332099035,
+    "E_heat_kWh": 11702.867802327259,
+    "dN_m": 1.685456790188998,
+    "dS_m": 2.3697179452067627,
+    "etaE_rad": 0.11096095419299046,
+    "etaW_rad": 0.10140434013251638
+  }
+}

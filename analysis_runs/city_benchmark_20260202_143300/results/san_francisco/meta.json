@@ -1,0 +1,36 @@
+{
+  "case": {
+    "name": "San Francisco",
+    "latitude": 37.7749,
+    "longitude": -122.4194,
+    "tz": "America/Los_Angeles"
+  },
+  "weather_csv": "D:\\ICM_CODE\\analysis_runs\\city_benchmark_20260202_143300\\weather\\san_francisco_tmy_hourly.csv",
+  "hvac": {
+    "Ci_J_per_K": 200000000.0,
+    "Cm_J_per_K": 800000000.0,
+    "Ria_K_per_W": 0.00025,
+    "Rim_K_per_W": 0.0001,
+    "eta_air": 0.35,
+    "T_heat_C": 18.0,
+    "T_cool_C": 26.0,
+    "T_init_C": 21.0,
+    "dt_hours": 1.0
+  },
+  "HDD": 1977.6782112958228,
+  "CDD": 4.00708333333332,
+  "xi": -0.9959558832634086,
+  "w_cool": 0.0020220583682957205,
+  "w_heat": 0.9979779416317043,
+  "pareto_size": 1,
+  "representative": {
+    "row_index_in_results": 1157,
+    "row_index_in_pareto": 0,
+    "E_cool_kWh": 0.0,
+    "E_heat_kWh": 72560.45200874907,
+    "dN_m": 0.0015562324971165609,
+    "dS_m": 0.17073960638535257,
+    "etaE_rad": 0.9666099739690414,
+    "etaW_rad": 1.5031515462346834
+  }
+}

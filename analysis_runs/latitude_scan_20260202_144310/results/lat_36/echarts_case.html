@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECharts Case</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    #chart { width: 100%; height: 600px; }
+    .note { color: #666; font-size: 12px; }
+    .btn { padding: 6px 12px; border: 1px solid #bbb; background: #f7f7f7; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2>Pareto Front (Heating vs Cooling Load)</h2>
+    <button id="btn-download" class="btn">Download PNG</button>
+  </div>
+  <div id="chart"></div>
+  <p class="note">If the chart doesn't load, open this file via a local web server (e.g., VSCode Live Server).</p>
+  <script>
+    fetch("./echarts_case.json")
+      .then(r => r.json())
+      .then(data => {
+        const all = data.pointsAll.map(p => [p.E_cool_kWh, p.E_heat_kWh]);
+        const pareto = data.pointsPareto.map(p => [p.E_cool_kWh, p.E_heat_kWh]);
+        const rep = [data.representative.E_cool_kWh, data.representative.E_heat_kWh];
+
+        const chart = echarts.init(document.getElementById("chart"));
+        chart.setOption({
+          grid: { left: 70, right: 70, top: 60, bottom: 70, containLabel: true },
+          tooltip: {
+            trigger: "item"
+          },
+          legend: { data: ["All", "Pareto", "Representative"], top: 10 },
+          xAxis: { name: "Cooling load (kWh_th)", nameGap: 30 },
+          yAxis: { name: "Heating load (kWh_th)", nameGap: 35 },
+          series: [
+            { name: "All", type: "scatter", data: all, symbolSize: 4, itemStyle: { opacity: 0.4 } },
+            { name: "Pareto", type: "scatter", data: pareto, symbolSize: 6 },
+            { name: "Representative", type: "scatter", data: [rep], symbolSize: 14, symbol: "diamond" }
+          ]
+        });
+
+        document.getElementById("btn-download").addEventListener("click", () => {
+          const url = chart.getDataURL({ type: "png", pixelRatio: 2, backgroundColor: "#fff" });
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "pareto_case.png";
+          a.click();
+        });
+      });
+  </script>
+</body>
+</html>

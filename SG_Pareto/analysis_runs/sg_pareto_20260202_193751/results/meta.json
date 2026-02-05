@@ -1,0 +1,60 @@
+{
+  "site": {
+    "name": "Singapore",
+    "latitude": 1.3521,
+    "longitude": 103.8198,
+    "tz": "Asia/Singapore"
+  },
+  "delta_trend_C": 1.5,
+  "use_ar1_noise": false,
+  "ar1_seed": 42,
+  "hvac": {
+    "T_heat_C": 18.0,
+    "T_cool_C": 26.0,
+    "dt_hours": 1.0,
+    "COP_cool": 3.0
+  },
+  "pv": {
+    "eta_pv": 0.18,
+    "alpha_to_cool": 1.0,
+    "roof_area_ref_m2": 1440.0
+  },
+  "geometry": {
+    "L0_m": 60.0,
+    "W0_m": 24.0,
+    "H0_m": 7.2,
+    "A0_m2": 1440.0,
+    "eps_A": 0.05,
+    "r_min": 2.0,
+    "r_max": 3.0,
+    "eps_H": 0.1,
+    "theta_max_deg": 30.0,
+    "wwr_min": 0.2,
+    "wwr_max": 0.6
+  },
+  "materials": {
+    "1": {
+      "Ci_J_per_K": 200000000.0,
+      "Cm_J_per_K": 800000000.0,
+      "Ria_K_per_W": 0.00025,
+      "Rim_K_per_W": 0.0001,
+      "eta_air": 0.35
+    },
+    "2": {
+      "Ci_J_per_K": 200000000.0,
+      "Cm_J_per_K": 1200000000.0,
+      "Ria_K_per_W": 0.0004,
+      "Rim_K_per_W": 0.00012,
+      "eta_air": 0.25
+    }
+  },
+  "samples": 2000,
+  "seed": 42,
+  "outputs": {
+    "weather_base": "D:\\ICM_CODE\\SG_Pareto\\analysis_runs\\sg_pareto_20260202_193751\\weather\\weather_singapore_tmy_hourly.csv",
+    "weather_trend": "D:\\ICM_CODE\\SG_Pareto\\analysis_runs\\sg_pareto_20260202_193751\\weather\\weather_singapore_tmy_hourly_trend_1p5C.csv",
+    "samples_csv": "D:\\ICM_CODE\\SG_Pareto\\analysis_runs\\sg_pareto_20260202_193751\\results\\samples.csv",
+    "pareto_csv": "D:\\ICM_CODE\\SG_Pareto\\analysis_runs\\sg_pareto_20260202_193751\\results\\pareto.csv",
+    "pareto_png": "D:\\ICM_CODE\\SG_Pareto\\analysis_runs\\sg_pareto_20260202_193751\\plots\\pareto.png"
+  }
+}

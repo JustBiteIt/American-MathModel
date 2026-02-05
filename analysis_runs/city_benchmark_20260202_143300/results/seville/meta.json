@@ -1,0 +1,36 @@
+{
+  "case": {
+    "name": "Seville",
+    "latitude": 37.3891,
+    "longitude": -5.9845,
+    "tz": "Europe/Madrid"
+  },
+  "weather_csv": "D:\\ICM_CODE\\analysis_runs\\city_benchmark_20260202_143300\\weather\\seville_tmy_hourly.csv",
+  "hvac": {
+    "Ci_J_per_K": 200000000.0,
+    "Cm_J_per_K": 800000000.0,
+    "Ria_K_per_W": 0.00025,
+    "Rim_K_per_W": 0.0001,
+    "eta_air": 0.35,
+    "T_heat_C": 18.0,
+    "T_cool_C": 26.0,
+    "T_init_C": 21.0,
+    "dt_hours": 1.0
+  },
+  "HDD": 1099.036659749671,
+  "CDD": 1104.8781818181817,
+  "xi": 0.002650520772551804,
+  "w_cool": 0.5013252603862759,
+  "w_heat": 0.4986747396137241,
+  "pareto_size": 40,
+  "representative": {
+    "row_index_in_results": 678,
+    "row_index_in_pareto": 15,
+    "E_cool_kWh": 33751.90204469632,
+    "E_heat_kWh": 51007.65695939235,
+    "dN_m": 0.4031007399391845,
+    "dS_m": 2.236943973713573,
+    "etaE_rad": 0.21400096116435557,
+    "etaW_rad": 0.15301218287639642
+  }
+}

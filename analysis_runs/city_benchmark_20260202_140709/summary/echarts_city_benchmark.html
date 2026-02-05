@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>City Benchmark</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 6px; }
+    #pareto { width: 100%; height: 520px; }
+    #climate { width: 100%; height: 380px; margin-top: 16px; }
+    .note { color: #666; font-size: 12px; }
+    .btn { padding: 6px 12px; border: 1px solid #bbb; background: #f7f7f7; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2>City Benchmark: Pareto Fronts</h2>
+    <button id="btn-pareto" class="btn">Download Pareto PNG</button>
+  </div>
+  <div id="pareto"></div>
+  <div class="header">
+    <h2>Climate Index (xi, dimensionless)</h2>
+    <button id="btn-climate" class="btn">Download Climate PNG</button>
+  </div>
+  <div id="climate"></div>
+  <p class="note">If the chart doesn't load, open this file via a local web server (e.g., VSCode Live Server).</p>
+  <script>
+    fetch("./echarts_city_benchmark.json")
+      .then(r => r.json())
+      .then(data => {
+        const cities = data.cities.map(c => c.name);
+        const paretoSeries = cities.map(name => ({
+          name,
+          type: "scatter",
+          data: (data.paretoFronts[name] || []).map(p => [p.E_cool_kWh, p.E_heat_kWh]),
+          symbolSize: 6
+        }));
+
+        const repSeries = {
+          name: "Representative",
+          type: "scatter",
+          data: data.cities.map(c => [c.representative.E_cool_kWh, c.representative.E_heat_kWh]),
+          symbol: "diamond",
+          symbolSize: 12
+        };
+
+        const paretoChart = echarts.init(document.getElementById("pareto"));
+        paretoChart.setOption({
+          grid: { left: 70, right: 70, top: 60, bottom: 70, containLabel: true },
+          legend: { data: [...cities, "Representative"], top: 10 },
+          tooltip: { trigger: "item" },
+          xAxis: { name: "Cooling load (kWh_th)", nameGap: 30 },
+          yAxis: { name: "Heating load (kWh_th)", nameGap: 35 },
+          series: [...paretoSeries, repSeries]
+        });
+
+        const xiVals = data.cities.map(c => c.climate.xi);
+        const climateChart = echarts.init(document.getElementById("climate"));
+        climateChart.setOption({
+          grid: { left: 70, right: 40, top: 50, bottom: 60, containLabel: true },
+          tooltip: { trigger: "axis" },
+          xAxis: { type: "category", data: cities, name: "City", nameGap: 30 },
+          yAxis: { type: "value", name: "xi (dimensionless)", nameGap: 35 },
+          series: [{ type: "bar", data: xiVals, name: "xi" }]
+        });
+
+        document.getElementById("btn-pareto").addEventListener("click", () => {
+          const url = paretoChart.getDataURL({ type: "png", pixelRatio: 2, backgroundColor: "#fff" });
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "city_pareto.png";
+          a.click();
+        });
+        document.getElementById("btn-climate").addEventListener("click", () => {
+          const url = climateChart.getDataURL({ type: "png", pixelRatio: 2, backgroundColor: "#fff" });
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "city_climate.png";
+          a.click();
+        });
+      });
+  </script>
+</body>
+</html>
